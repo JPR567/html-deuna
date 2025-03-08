@@ -1,0 +1,110 @@
+/* Aplicar box-sizing correctamente */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #3D2555;
+    font-family: Arial, sans-serif;
+    color:white ;
+}
+
+.signUp-Container {
+    max-width: 400px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 20px;
+
+}
+
+/* Estilos para el input con icono */
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 40px; /* Espacio para el icono */
+    border: none;
+    color: white;
+    border-bottom: 2px solid #2BDAAB;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.426);
+}
+
+/* Iconos dentro del input */
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2BDAAB;
+    font-size: 18px;
+}
+
+/* Logo */
+.logo-img {
+    max-width: 150px;
+    max-height: 150px;
+    margin-bottom: 20px;
+}
+
+.log-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logIn-btn{
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    background-color: #2BDAAB;
+    color: #ddd;
+    transition: .1s ease;
+}
+
+.logIn-btn:active{
+    background-color:#088261;
+    
+}
+
+.button a{
+    color: #2BDAAB;    
+    text-decoration: none;
+    transition: 0.1s ease;
+}
+
+.button a:active{
+    text-decoration: underline;
+}

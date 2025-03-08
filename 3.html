@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+    <!-- Enlace a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/styles/3.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Saludo -->
+        <div class="header">
+            <div class="user-info">
+                <div class="avatar">DP</div>
+                <h2>Hola David 👋</h2>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-headphones"></i>
+            </div>
+        </div>
+
+        <!-- Banner -->
+        <div class="banner">
+            <p><strong>Rápido y sin complicaciones</strong></p>
+            <p>Transfiere a otros bancos al instante</p>
+        </div>
+
+        <!-- Saldo disponible -->
+        <div class="balance-card">
+            <p>Saldo disponible</p>
+            <h1 id="balance">****** <span id="toggleBalance"><i class="fa-solid fa-eye"></i></span></h1>
+            <p class="small-text">Recargar desde <strong>PRINCIPAL ******5683</strong></p>
+            <button class="btn">+ $10</button>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="info-box">
+            <p>Conoce cómo pagar sin internet</p>
+        </div>
+
+        <!-- Acciones principales -->
+        <div class="actions">
+            <div class="action-card"><i class="fa-solid fa-money-bill-transfer"></i> <p>Transferir</p></div>
+            <div class="action-card"><i class="fa-solid fa-wallet"></i> <p>Recargar</p></div>
+            <div class="action-card"><i class="fa-solid fa-calculator"></i> <p>Cobrar</p></div>
+            <div class="action-card"><i class="fa-solid fa-train"></i> <p>Metro de Quito</p></div>
+            <div class="action-card"><i class="fa-solid fa-gift"></i> <p>Invita y Gana</p></div>
+            <div class="action-card"><i class="fa-solid fa-user-graduate"></i> <p>Deuna Jóvenes</p></div>
+            <div class="action-card"><i class="fa-solid fa-shield-check"></i> <p>Verificar pago</p></div>
+            <!-- NUEVOS BOTONES -->
+            <div class="action-card"><i class="fa-solid fa-coins"></i> <p>Historial</p></div>
+            <div class="action-card"><i class="fa-solid fa-file-invoice-dollar"></i> <p>Facturación</p></div>
+        </div>
+
+        <!-- Sección de promociones -->
+        <h3>Mis promociones</h3>
+        <div class="promo-buttons">
+            <button class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Transferir</button>
+            <button class="btn btn-filled"><i class="fa-solid fa-qrcode"></i> Pagar a QR</button>
+        </div>
+
+        <!-- Barra de navegación -->
+        <div class="nav-bar">
+            <div class="nav-item"><i class="fa-solid fa-house"></i> <p>Inicio</p></div>
+            <div class="nav-item"><i class="fa-solid fa-ticket"></i> <p>Promos</p></div>
+            <div class="nav-item"><i class="fa-solid fa-credit-card"></i> <p>Billetera</p></div>
+            <div class="nav-item"><i class="fa-solid fa-user"></i> <p>Tú</p></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

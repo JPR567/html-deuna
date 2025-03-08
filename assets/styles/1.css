@@ -1,0 +1,183 @@
+/* Reset y Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #662D91;
+    margin-bottom: 10px;
+}
+
+/* Contenedor del QR */
+.qr-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagen QR */
+.qr-code {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    
+}
+
+/* Bordes del QR */
+.qr-border {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+}
+
+.corner {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+}
+
+/* Bordes de las esquinas */
+.corner::before, .corner::after {
+    content: "";
+    position: absolute;
+    background-color: #662D91;
+}
+
+/* Esquina superior izquierda */
+.corner.top-left::before {
+    width: 20px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+.corner.top-left::after {
+    width: 5px;
+    height: 20px;
+    top: 0;
+    left: 0;
+}
+
+/* Esquina superior derecha */
+.corner.top-right::before {
+    width: 20px;
+    height: 5px;
+    top: 0;
+    right: 0;
+}
+.corner.top-right::after {
+    width: 5px;
+    height: 20px;
+    top: 0;
+    right: 0;
+}
+
+/* Esquina inferior izquierda */
+.corner.bottom-left::before {
+    width: 20px;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+}
+.corner.bottom-left::after {
+    width: 5px;
+    height: 20px;
+    bottom: 0;
+    left: 0;
+}
+
+/* Esquina inferior derecha */
+.corner.bottom-right::before {
+    width: 20px;
+    height: 5px;
+    bottom: 0;
+    right: 0;
+}
+.corner.bottom-right::after {
+    width: 5px;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+}
+
+/* Texto del Número de Cuenta */
+.account-text {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+.logo img{  
+    max-width: 300px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.account-number {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.account-number i {
+    cursor: pointer;
+    color: #555;
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    color: #662D91;
+}
+
+.button i {
+    font-size: 24px;
+    background: #F2E8FF;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Botón de Ingreso */
+.login-btn {
+    background-color: #662D91;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 18px;
+    width: 80%;
+    margin-top: 30px;
+    cursor: pointer;
+    text-align: center;
+}
