@@ -1,0 +1,180 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor Principal */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+    padding-bottom: 80px; /* Espacio para el footer */
+}
+
+/* Estilos del Día */
+.date {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5d5a5a;
+    margin-bottom: 15px;
+}
+
+/* Título Principal */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6c5ce7;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilos del cuadro de ingresos */
+.saving-box {
+    background: linear-gradient(135deg, #7bdcb5, #6c5ce7);
+    padding: 25px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.saving-box .box-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.input-group {
+    margin: 12px 0;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Botón Guardar */
+.save-btn {
+    background-color: #5a189a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.save-btn:hover {
+    background-color: #4c148a;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px);
+}
+
+/* Historial de Ahorros */
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #5d5a5a;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+
+.history {
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 12px;
+}
+
+.history ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0; /* Evita que el footer lo cubra */
+}
+
+.history ul li {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+    color: #545454;
+    display: flex;
+    justify-content: space-between;
+}
+
+.history ul li:last-child {
+    border-bottom: none;
+}
+
+/* Footer de Navegación */
+.footer {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer div {
+    text-align: center;
+    font-size: 15px;
+    color: #5a189a;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.footer div:hover {
+    color: #3e0c6e;
+    transform: scale(1.1);
+}
+
+.footer i {
+    font-size: 22px;
+    margin-bottom: 6px;
+    display: block;
+}

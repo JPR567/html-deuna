@@ -12,8 +12,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
+    padding: 20px;
 }
 
 /* Logo */
@@ -21,7 +22,12 @@ body {
     font-size: 32px;
     font-weight: bold;
     color: #662D91;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.logo img {  
+    max-width: 250px;
+    width: 100%;
 }
 
 /* Contenedor del QR */
@@ -39,7 +45,6 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 10px;
-    
 }
 
 /* Bordes del QR */
@@ -122,15 +127,10 @@ body {
 .account-text {
     font-size: 14px;
     color: #777;
-    margin-top: 10px;
+    margin-top: 12px;
 }
-.logo img{  
-    max-width: 300px;
-}
-a{
-    text-decoration: none;
-    color: white;
-}
+
+/* Número de Cuenta */
 .account-number {
     font-size: 18px;
     font-weight: bold;
@@ -150,8 +150,11 @@ a{
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 15px;
+    flex-wrap: wrap;
     margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .button {
@@ -160,6 +163,8 @@ a{
     align-items: center;
     font-size: 14px;
     color: #662D91;
+    width: 30%;
+    min-width: 100px;
 }
 
 .button i {
@@ -177,7 +182,104 @@ a{
     border-radius: 30px;
     font-size: 18px;
     width: 80%;
+    max-width: 400px;
     margin-top: 30px;
     cursor: pointer;
     text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #57187c;
+    transform: translateY(-2px);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 28px;
+    }
+
+    .qr-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .qr-code {
+        width: 160px;
+        height: 160px;
+    }
+
+    .qr-border {
+        width: 180px;
+        height: 180px;
+    }
+
+    .corner {
+        width: 30px;
+        height: 30px;
+    }
+
+    .account-number {
+        font-size: 16px;
+    }
+
+    .button i {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    .login-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 24px;
+    }
+
+    .qr-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .qr-code {
+        width: 130px;
+        height: 130px;
+    }
+
+    .qr-border {
+        width: 150px;
+        height: 150px;
+    }
+
+    .corner {
+        width: 25px;
+        height: 25px;
+    }
+
+    .account-number {
+        font-size: 14px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .button {
+        font-size: 12px;
+        min-width: 80px;
+    }
+
+    .button i {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
 }

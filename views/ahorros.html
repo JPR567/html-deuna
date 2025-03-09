@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorro Automático</title>
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="/css/5.css">
+    
+    <!-- Enlace a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Mostrar día actual -->
+        <div class="date">
+            <p id="current-date"></p>
+        </div>
+
+        <!-- Título Principal -->
+        <h2>Ahorro Automático</h2>
+
+        <!-- Cuadro de Ingresos -->
+        <div class="saving-box">
+            <p class="box-title">Ingresos Diarios</p>
+            
+            <div class="input-group">
+                <label for="ingresos">Ingrese sus ingresos:</label>
+                <input type="number" id="ingresos" placeholder="Ej. 500">
+            </div>
+
+            <div class="input-group">
+                <label for="sugerencia">Sugerencia de Ahorro:</label>
+                <input type="text" id="sugerencia" placeholder="Ej. 20%">
+            </div>
+
+            <button class="save-btn" onclick="guardarAhorro()">Guardar en Billetera</button>
+        </div>
+
+        <!-- Historial de Ahorros -->
+        <h3>Historial de Ahorros</h3>
+        <div class="history">
+            <ul id="historial-lista">
+                <li>📅 5 de Marzo - Ingresos: $500 | Ahorro: 20% ($100)</li>
+                <li>📅 6 de Marzo - Ingresos: $450 | Ahorro: 15% ($67.50)</li>
+                <li>📅 7 de Marzo - Ingresos: $600 | Ahorro: 25% ($150)</li>
+                <li>📅 8 de Marzo - Ingresos: $550 | Ahorro: 18% ($99)</li>
+                <li>📅 9 de Marzo - Ingresos: $480 | Ahorro: 22% ($105.60)</li>
+                <li>📅 10 de Marzo - Ingresos: $530 | Ahorro: 20% ($106)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer con navegación -->
+    <div class="container footer">
+        <div onclick="window.location.href='/'"><i class="fa fa-home"></i> Inicio</div>
+        <div><i class="fa fa-tag"></i> Promos</div>
+        <div onclick="window.location.href='/billetera'"><i class="fa fa-credit-card"></i> Billetera</div>
+        <div><i class="fa fa-user"></i> Tú</div>
+    </div>
+
+    <!-- Script para mostrar la fecha y manejar el botón de guardar -->
+    <script>
+        document.getElementById("current-date").innerText = new Date().toLocaleDateString("es-ES", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+        function guardarAhorro() {
+            let ingresos = document.getElementById("ingresos").value;
+            let sugerencia = document.getElementById("sugerencia").value;
+
+            if (ingresos && sugerencia) {
+                let porcentaje = parseFloat(sugerencia.replace('%', '')) / 100;
+                let ahorroCalculado = (parseFloat(ingresos) * porcentaje).toFixed(2);
+
+                let lista = document.getElementById("historial-lista");
+                let nuevoRegistro = document.createElement("li");
+
+                let fecha = new Date().toLocaleDateString("es-ES", { day: 'numeric', month: 'long' });
+
+                nuevoRegistro.innerHTML = `📅 ${fecha} - Ingresos: $${ingresos} | Ahorro: ${sugerencia} ($${ahorroCalculado})`;
+                lista.appendChild(nuevoRegistro);
+
+                document.getElementById("ingresos").value = "";
+                document.getElementById("sugerencia").value = "";
+            } else {
+                alert("Por favor, complete ambos campos antes de guardar.");
+            }
+        }
+    </script>
+</body>
+</html>

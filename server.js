@@ -24,6 +24,10 @@ app.get('/pagina4', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'views', '4.html'));
 });
 
+app.get('/ahorros', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'views', 'ahorros.html'));
+});
+
 // Manejo de rutas inexistentes (Error 404)
 app.use((req, res) => {
     res.status(404).sendFile(path.resolve(__dirname, 'views', '404.html'));

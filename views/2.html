@@ -1,16 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeUna!</title>
-    <link rel="website icon" type="image/png" href="/assets/icon-deuna.png">
+    
+    <!-- Ícono de la Página -->
+    <link rel="icon" type="image/png" href="/img/icon-deuna.png">
+    
+    <!-- Estilos y FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
     <div class="signUp-Container">
-        <img src="/assets/icon-deuna.png" alt="Logo DeUna" class="logo-img">
+        <!-- Logo -->
+        <img src="/img/icon-deuna.png" alt="Logo DeUna" class="logo-img" onerror="this.src='/img/default-logo.png'">
+
+        <!-- Formulario de Inicio de Sesión -->
         <form class="log-in">
             <div class="input-container">
                 <i class="fas fa-id-card"></i>
@@ -21,16 +29,19 @@
                 <i class="fas fa-envelope"></i>
                 <input type="email" name="correo" id="correo" placeholder="Correo" required>
             </div>
+
             <div class="input-container">
                 <i class="fas fa-lock"></i>
                 <input type="password" name="password" id="password" autocomplete="off" placeholder="Contraseña" required>
             </div>
 
+            <!-- Botón de Ingreso -->
             <div class="button">
                 <button class="logIn-btn" type="button" onclick="window.location.href='/dashboard'">Ingresar</button>
                 <p>Si no tienes una cuenta <a href="#" target="_parent">Crea una aquí</a></p>
             </div>
         </form>
     </div>
+
 </body>
 </html>
