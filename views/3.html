@@ -8,8 +8,11 @@
     <!-- Enlace a Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="./assets/styles/3.css">
-    <script defer src="script.js"></script>
+    <!-- Corrección de la ruta del CSS -->
+    <link rel="stylesheet" href="/css/3.css">
+
+    <!-- Corrección de la ruta del script -->
+    <script defer src="/script.js"></script>
 </head>
 <body>
 
@@ -54,7 +57,6 @@
             <div class="action-card"><i class="fa-solid fa-gift"></i> <p>Invita y Gana</p></div>
             <div class="action-card"><i class="fa-solid fa-user-graduate"></i> <p>Deuna Jóvenes</p></div>
             <div class="action-card"><i class="fa-solid fa-shield-check"></i> <p>Verificar pago</p></div>
-            <!-- NUEVOS BOTONES -->
             <div class="action-card"><i class="fa-solid fa-coins"></i> <p>Historial</p></div>
             <div class="action-card"><i class="fa-solid fa-file-invoice-dollar"></i> <p>Facturación</p></div>
         </div>
@@ -70,10 +72,12 @@
         <div class="nav-bar">
             <div class="nav-item"><i class="fa-solid fa-house"></i> <p>Inicio</p></div>
             <div class="nav-item"><i class="fa-solid fa-ticket"></i> <p>Promos</p></div>
-            <div class="nav-item"><i class="fa-solid fa-credit-card"></i> <p>Billetera</p></div>
+            <div class="nav-item" onclick="window.location.href='/pagina4'">
+                <i class="fa-solid fa-credit-card"></i> 
+                <p>Billetera</p>
+            </div>
             <div class="nav-item"><i class="fa-solid fa-user"></i> <p>Tú</p></div>
         </div>
-
     </div>
 
 </body>
