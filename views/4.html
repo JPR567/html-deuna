@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estadísticas</title>
     
-    <!-- Corrección de la ruta del CSS -->
     <link rel="stylesheet" href="/css/4.css">
-    
-    <!-- Enlace a Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h2>Estadísticas</h2>
+        <div class="header">
+            <i class="fa-solid fa-arrow-left"></i>
+            <h2>Estadísticas</h2>
+            <div class="blank-header-space"></div>
+        </div>
         <div class="balance">
             <p class="saldo">Saldo disponible</p>
             <h1 class="monto">$234.54</h1>
@@ -23,36 +24,36 @@
             <p>Overview</p>
             <div class="select-container">
                 <select class="custom-select">
-                    <option>Mes</option>
-                    <option>Semana</option>
-                    <option>Día</option>
-                    <option>Año</option>
+                    <option value="mes">Mes</option>
+                    <option value="dia">Día</option>
+                    <option value="anio">Año</option>
                 </select>
             </div>
         </div>
         
-        <img src="https://placehold.co/334x170" alt="Gráfico de estadísticas" class="data">
+        <img src="img/diagrama-mes.png" alt="Gráfico de estadísticas" class="data">
         
         <div class="loss-gain">
-            <div class="loss-card">
-                <p>Pérdidas</p>
-                <h2>$76.84</h2>
+            <div class="loss-card card">
+                <i class="fa fa-circle-arrow-down"></i>
+                <div class="card-text">
+                    <p>Pérdidas</p>
+                    <h3>$76.84</h3>
+                </div>
             </div>
-            <div class="gain-card">
-                <p>Ganancias</p>
-                <h2>$107.16</h2>
+            <div class="gain-card card">
+                <i class="fa fa-circle-arrow-down"></i>
+                <div class="card-text">
+                    <p>Ganancias</p>
+                    <h3>$107.16</h3>
+                </div>
+
             </div>
         </div>
+
+
     </div>
 
-    <!-- Footer con íconos alineados y enlaces -->
-    <div class="container footer">
-        <div onclick="window.location.href='/'"><i class="fa fa-home"></i> Inicio</div>
-        <div><i class="fa fa-tag"></i> Promos</div>
-        <div onclick="window.location.href='/billetera'"><i class="fa fa-credit-card"></i> Billetera</div>
-        <div><i class="fa fa-user"></i> Tú</div>
-    </div>
-
-    <script src="/app.js"></script>
+    <script src="/js/finance.js"></script>
 </body>
 </html>
